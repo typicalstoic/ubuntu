@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project of Malika M</title>
+    <style>
+        table {
+            width: 60%;
+            margin: 20px auto;
+            justify-content: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            background-color: #ADD8E6;
+        }
+        th {
+            background-color: pink;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: pink;
+            color: black;
+            text-decoration: none;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #ff99cc;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Schedule</h1>
+    <div class="button-container">
+        <a class="button" href="/sort/asc">Sort Levels</a>
+        <a class="button" href="/reset">Reset</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Time</th>
+                <th>Day</th>
+                <th>Instructor</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.id }}</td>
+                <td>{{ course.course }}</td>
+                <td><a href="{{ url_for('course_detail', course_id=course.id) }}">{{ course.description }}</a></td>
+                <td>{{ course.time }}</td>
+                <td>{{ course.week_day }}</td>
+                <td>{{ course.instructor }}</td>
+                <td>{{ course.level }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

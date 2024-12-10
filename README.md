@@ -100,15 +100,19 @@ Created a main.py file containing:
 
 ##### 1. Home Page
 
+![image](https://github.com/user-attachments/assets/c0cbc437-c971-426c-b63e-415e5f7c2483)
+
+##### 2.  Page of Course Details
+
+![image](https://github.com/user-attachments/assets/e17f68c1-7fff-456f-846f-e98d6ade57c9)
 
 
-Displays the course schedule in a table format.
+##### 3. Sorted by Difficulty
+
+![image](https://github.com/user-attachments/assets/fa86fc6b-d796-4069-b6b5-f6d8f628afe1)
 
 
-##### 2. Sorted by Difficulty
-
-
-Displays the courses sorted by difficulty (e.g., Undergraduate first, followed by Graduate).
+Displays the courses sorted by difficulty (e.g., 1000 first, followed by 2000, 3000 and 4000).
 
 
 
